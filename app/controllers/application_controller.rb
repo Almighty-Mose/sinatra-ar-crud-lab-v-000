@@ -1,4 +1,4 @@
-require 'pry'
+
 require_relative '../../config/environment'
 
 class ApplicationController < Sinatra::Base
@@ -30,7 +30,6 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/posts' do
-    binding.pry
     Post.create(params)
 
     redirect to '/posts'
