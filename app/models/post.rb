@@ -4,10 +4,7 @@ class Post < ActiveRecord::Base
 
   POSTS = []
 
-  def initialize(params)
-    @name = params[:name]
-    @content = params[:content]
-
+  def initialize
     POSTS << self
   end
 
