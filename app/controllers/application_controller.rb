@@ -33,7 +33,7 @@ class ApplicationController < Sinatra::Base
     binding.pry
     Post.create(params)
 
-    erb :index
+    redirect to '/posts'
   end
 
   patch '/posts/:id' do
