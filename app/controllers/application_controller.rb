@@ -31,7 +31,7 @@ class ApplicationController < Sinatra::Base
 
   post '/posts' do
     Post.create(params)
-
+    
     redirect to '/posts'
   end
 
@@ -42,5 +42,9 @@ class ApplicationController < Sinatra::Base
     @post.save
 
     erb :show
+  end
+
+  delete '/posts/:id/delete' do
+    erb :delete
   end
 end
